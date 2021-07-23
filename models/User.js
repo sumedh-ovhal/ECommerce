@@ -7,18 +7,18 @@ const UserSchema=new mongoose.Schema({
   email:{
     type:String,
     required:true,
-    unique:true //unique email for each user
+    unique:true, //unique email for each user
   },
   password:{
     type:String,
-    required:true
+    required:true,
   },
   avatar:{//User Image
     type:String,
   },
   role:{//Role of user Admin Or Consumer
     type:Number,
-    default:0
+    default:0,
   },
   history:{
     tyep:Array,
@@ -26,4 +26,4 @@ const UserSchema=new mongoose.Schema({
   },
 });
 
-module.exports=User=mongoose.model('User,UserSv')
+module.exports=User=mongoose.model('User',UserSchema)
